@@ -5,10 +5,12 @@ import Modal from 'react-bootstrap/Modal';
 
 const ModalTask = ({ showModal, setShowModal }) => {
 
-    const [infoTitle, setInfoTitle] = useState();
-    const [infoDescription, setInfoDescription] = useState();
-    const [prioridad, setPrioridad] = useState();
-    const [fechaLimite, setFechaLimite] = useState();
+    const [infoTitle, setInfoTitle] = useState('');
+    const [infoDescription, setInfoDescription] = useState('');
+    const [prioridad, setPrioridad] = useState('');
+    const [fechaLimite, setFechaLimite] = useState('');
+    const [categoria, setCategoria] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
 
     if (!showModal) return null;
@@ -18,19 +20,35 @@ const ModalTask = ({ showModal, setShowModal }) => {
         setShowModal(false);
         setInfoTitle('');
         setInfoDescription('');
+        setPrioridad('');
+        setFechaLimite('');
+        setCategoria('');
+        setErrorMessage('');
 
     };
 
     const handleCreateTask = () => {
-        if (infoTitle != '') {
+        if (infoTitle != '' && infoDescription != '' && prioridad != ''  && fechaLimite != '' && categoria != '') {
             console.log(infoTitle);
             console.log(infoDescription);
+            console.log(prioridad);
+            console.log(fechaLimite);
+            console.log(categoria);
+            
+            
+            
             setInfoTitle('');
             setInfoDescription('');
+            setPrioridad('');
+            setFechaLimite('');
+            setCategoria('');
+            setErrorMessage('')
 
             handleClose();
         } else {
-            console.log('El titulo no puede estar vacio');
+            setErrorMessage('Debes llenar todos los campos')
+            console.log('falta llenar datos');
+            
         }
     }
 
@@ -68,8 +86,8 @@ const ModalTask = ({ showModal, setShowModal }) => {
                         <div className='row'>
                             <Form.Group className="mb-3 col-md-6" >
                                 <Form.Label>Prioridad</Form.Label>
-                                <Form.Select>
-                                    <option value="seleccionar">Seleccionar</option>
+                                <Form.Select value={prioridad} onChange={e => setPrioridad(e.target.value)}>
+                                    <option value="">Seleccionar</option>
                                     <option value="alta">Alta</option>
                                     <option value="media">Media</option>
                                     <option value="baja">baja</option>
@@ -77,8 +95,10 @@ const ModalTask = ({ showModal, setShowModal }) => {
 
                             </Form.Group>
                             <Form.Group className="mb-3 col-md-6">
-                                <Form.Label>Fecha límite</Form.Label>
-                                <Form.Control type="date" >
+                                <Form.Label>
+                                    Fecha límite
+                                </Form.Label>
+                                <Form.Control type="date" value={fechaLimite} onChange={e => setFechaLimite(e.target.value)}>
 
                                 </Form.Control>
                             </Form.Group>
@@ -90,10 +110,17 @@ const ModalTask = ({ showModal, setShowModal }) => {
                                 type="text"
                                 placeholder="ej. Desarrollo, Diseño..."
                                 autoFocus
-                                value={infoTitle}
-                                onChange={e => setInfoTitle(e.target.value)}
+                                value={categoria}
+                                onChange={e => setCategoria(e.target.value)}
                             />
                         </Form.Group>
+                        {
+                            errorMessage && (
+                                <div className='alert alert-danger text-center p-2'>
+                                    {errorMessage}
+                                </div>
+                            )
+                        }
                     </Form>
                 </Modal.Body>
                 <Modal.Footer className='d-flex justify-content-between'>
