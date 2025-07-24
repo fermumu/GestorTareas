@@ -1,4 +1,7 @@
 
+import { useState } from 'react';
+
+export function useTaskForm (){
     const [infoTitle, setInfoTitle] = useState('');
     const [infoDescription, setInfoDescription] = useState('');
     const [prioridad, setPrioridad] = useState('');
@@ -29,4 +32,19 @@
             console.log('falta llenar datos');
             
         }
-    }
+    };
+
+    return {
+        infoTitle, setInfoTitle,
+        infoDescription, setInfoDescription,
+        prioridad, setPrioridad,
+        fechaLimite, setFechaLimite,
+        categoria, setCategoria,
+        errorMessage,
+        handleCreateTask
+    };
+
+}
+
+
+    
