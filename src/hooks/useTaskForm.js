@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { saveTask } from '../services/localStorageService';
 
 export function useTaskForm(handleClose) {
     const [infoTitle, setInfoTitle] = useState('');
@@ -11,13 +12,8 @@ export function useTaskForm(handleClose) {
 
     const handleCreateTask = () => {
         if (infoTitle != '' && infoDescription != '' && prioridad != '' && fechaLimite != '' && categoria != '') {
-            console.log(infoTitle);
-            console.log(infoDescription);
-            console.log(prioridad);
-            console.log(fechaLimite);
-            console.log(categoria);
 
-
+            saveTask(infoTitle,infoDescription, prioridad, fechaLimite, categoria);
 
             setInfoTitle('');
             setInfoDescription('');
