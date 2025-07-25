@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 
-export function useTaskForm (){
+export function useTaskForm(handleClose) {
     const [infoTitle, setInfoTitle] = useState('');
     const [infoDescription, setInfoDescription] = useState('');
     const [prioridad, setPrioridad] = useState('');
@@ -10,29 +10,38 @@ export function useTaskForm (){
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleCreateTask = () => {
-        if (infoTitle != '' && infoDescription != '' && prioridad != ''  && fechaLimite != '' && categoria != '') {
+        if (infoTitle != '' && infoDescription != '' && prioridad != '' && fechaLimite != '' && categoria != '') {
             console.log(infoTitle);
             console.log(infoDescription);
             console.log(prioridad);
             console.log(fechaLimite);
             console.log(categoria);
-            
-            
-            
+
+
+
             setInfoTitle('');
             setInfoDescription('');
             setPrioridad('');
             setFechaLimite('');
             setCategoria('');
             setErrorMessage('')
-
+            resetForm();
             handleClose();
         } else {
             setErrorMessage('Debes llenar todos los campos')
             console.log('falta llenar datos');
-            
+
         }
     };
+
+    const resetForm = () => {
+        setInfoTitle('');
+        setInfoDescription('');
+        setPrioridad('');
+        setFechaLimite('');
+        setCategoria('');
+        setErrorMessage('');
+    }
 
     return {
         infoTitle, setInfoTitle,
@@ -41,10 +50,12 @@ export function useTaskForm (){
         fechaLimite, setFechaLimite,
         categoria, setCategoria,
         errorMessage,
+        resetForm,
         handleCreateTask
     };
+
+
 
 }
 
 
-    

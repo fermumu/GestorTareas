@@ -2,25 +2,34 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import { useTaskForm } from '../hooks/useTaskForm';
 
 const ModalTask = ({ showModal, setShowModal }) => {
 
-    
-
-
     if (!showModal) return null;
 
-
-    const handleClose = () => {
+    
+    const {
+        infoTitle, setInfoTitle,
+        infoDescription, setInfoDescription,
+        prioridad, setPrioridad,
+        fechaLimite, setFechaLimite,
+        categoria, setCategoria,
+        errorMessage,
+        handleCreateTask,
+        resetForm
+    } = useTaskForm(()=>{
         setShowModal(false);
-        setInfoTitle('');
-        setInfoDescription('');
-        setPrioridad('');
-        setFechaLimite('');
-        setCategoria('');
-        setErrorMessage('');
+    }
 
-    };
+    );
+
+    const handleClose = () =>{
+        setShowModal (false);
+        resetForm();
+    }
+
+    
 
     
 
