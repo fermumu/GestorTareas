@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { saveTask } from '../services/localStorageService';
+import { validateTaskData } from '../utils/validators/taskValidator';
 
 export function useTaskForm(handleClose) {
     const [infoTitle, setInfoTitle] = useState('');
@@ -11,7 +12,10 @@ export function useTaskForm(handleClose) {
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleCreateTask = () => {
-        if (infoTitle != '' && infoDescription != '' && prioridad != '' && fechaLimite != '' && categoria != '') {
+        
+        const validator = validateTaskData(infoTitle,infoDescription, prioridad, fechaLimite, categoria)
+        
+        if (validator) {
 
             saveTask(infoTitle,infoDescription, prioridad, fechaLimite, categoria);
 
