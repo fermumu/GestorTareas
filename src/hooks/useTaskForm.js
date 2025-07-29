@@ -13,9 +13,14 @@ export function useTaskForm(handleClose) {
 
     const handleCreateTask = () => {
         
-        const validator = validateTaskData(infoTitle,infoDescription, prioridad, fechaLimite, categoria)
+        const { isValid, message } = validateTaskData({
+            Titulo:infoTitle,
+            Descripcion:infoDescription, 
+            Prioridad:prioridad, 
+            Fecha:fechaLimite, 
+            Categoria:categoria})
         
-        if (validator) {
+        if (isValid) {
 
             saveTask(infoTitle,infoDescription, prioridad, fechaLimite, categoria);
 
@@ -28,8 +33,8 @@ export function useTaskForm(handleClose) {
             resetForm();
             handleClose();
         } else {
-            setErrorMessage('Debes llenar todos los campos')
-            console.log('falta llenar datos');
+            setErrorMessage(message)
+            console.log(message);
 
         }
     };
