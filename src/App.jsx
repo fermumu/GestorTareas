@@ -5,9 +5,11 @@ import Title from "./components/Title"
 import './styles/App.css'
 import ModalTask from "./components/ModalTask"
 
+
 function App() {
 
   const [showModal, setShowModal] = useState(false);
+  
 
   return (
     <>
@@ -18,6 +20,7 @@ function App() {
         </div>
         <ButtonTask setShowModal = {setShowModal}/>
         <ModalTask showModal = {showModal} setShowModal = {setShowModal}/>
+        
       </div>
       
     </>
