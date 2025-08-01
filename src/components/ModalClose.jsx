@@ -1,8 +1,9 @@
 import { Modal, Button } from 'react-bootstrap';
+import '../styles/ModalClose.css';
 
 const ModalClose = ({ show, handleClose }) => {
     return (
-        <Modal show={show} onHide={handleClose} centered>
+        <Modal show={show} onHide={handleClose} centered className="modal-dark-bg">
             <Modal.Header closeButton>
                 <Modal.Title>Tarea creada</Modal.Title>
             </Modal.Header>

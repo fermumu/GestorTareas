@@ -4,6 +4,7 @@ import ContainerCards from "./components/ContainerCards"
 import Title from "./components/Title"
 import './styles/App.css'
 import ModalTask from "./components/ModalTask"
+import TaskCards from "./components/TaskCards"
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         </div>
         <ButtonTask setShowModal = {setShowModal}/>
         <ModalTask showModal = {showModal} setShowModal = {setShowModal}/>
-        
+        <TaskCards/>
       </div>
       
     </>

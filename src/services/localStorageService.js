@@ -16,6 +16,6 @@ export function saveTask(infoTitle,infoDescription, prioridad, fechaLimite, cate
 };
 
 export function getTask() {
-    const getData = JSON.parse(localStorage.getItem("tareas"));
-
+   return JSON.parse(localStorage.getItem("tareas")) || {};
+    
 }
