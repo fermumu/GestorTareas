@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import { useTaskForm } from '../hooks/useTaskForm';
 import ModalClose from "./ModalClose";
 
-const ModalTask = ({ showModal, setShowModal }) => {
+const ModalTask = ({ showModal, setShowModal, setUpdateTasks }) => {
 
     if (!showModal) return null;
 
@@ -27,7 +27,10 @@ const ModalTask = ({ showModal, setShowModal }) => {
         resetForm();
     }
 
-
+    const handleClick = ()=> {
+        handleCreateTask();
+        setUpdateTasks(prev => !prev);
+    }
 
 
 
@@ -103,7 +106,7 @@ const ModalTask = ({ showModal, setShowModal }) => {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer className='d-flex justify-content-between'>
-                    <Button className='btn-lg px-5' variant="dark" onClick={handleCreateTask}>
+                    <Button className='btn-lg px-5' variant="dark" onClick={handleClick}>
                         Crear Tarea
                     </Button>
                     <Button className='btn-lg' variant="outline-secondary" onClick={handleClose}>

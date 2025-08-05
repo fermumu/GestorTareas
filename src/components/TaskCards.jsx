@@ -1,26 +1,29 @@
 import { useState, useEffect } from "react";
 import { getTask } from "../services/localStorageService";
+import CardsInfo from "./CardsInfo";
 
 
-const TaskCards = () =>{
+const TaskCards = ({ updateTasks }) => {
 
 
-    const [data, setData] = useState({})
+    const [data, setData] = useState([])
 
     useEffect(() => {
         const tarea = getTask();
         console.log("Tarea cargada:", tarea);
         setData(tarea)
-    }, [])
-    
-    return(
+    }, [updateTasks])
+
+    return (
         <>
-            {data && (
-                <div>
-                    <h3>{data.titulo}</h3>
-                    <h3>{data.description}</h3>
-                    
-                </div>
+            {data.map(
+                (datos, index) => (
+                    <CardsInfo
+                        key={index}
+                        titulo={datos.titulo}
+                        description={datos.description}
+                    />
+                )
             )}
         </>
     )

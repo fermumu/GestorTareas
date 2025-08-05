@@ -10,6 +10,7 @@ import TaskCards from "./components/TaskCards"
 function App() {
 
   const [showModal, setShowModal] = useState(false);
+  const [updateTasks, setUpdateTasks] = useState(false);
   
 
   return (
@@ -20,8 +21,8 @@ function App() {
           <ContainerCards />
         </div>
         <ButtonTask setShowModal = {setShowModal}/>
-        <ModalTask showModal = {showModal} setShowModal = {setShowModal}/>
-        <TaskCards/>
+        <ModalTask showModal = {showModal} setShowModal = {setShowModal} setUpdateTasks = {setUpdateTasks}/>
+        <TaskCards updateTasks = {updateTasks}/>
       </div>
       
     </>
