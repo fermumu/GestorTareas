@@ -22,6 +22,7 @@ const TaskCards = ({ updateTasks }) => {
                         key={index}
                         titulo={datos.titulo}
                         description={datos.description}
+                        fechaLimite={datos.fechaLimite}
                     />
                 )
             )}

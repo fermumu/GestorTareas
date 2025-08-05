@@ -1,0 +1,7 @@
+.container-cards{
+    margin-top: 20px;
+    background-color: rgb(254, 254, 254);
+    box-shadow: 2px 4px 15px grey;
+    padding: 10px 20px;
+    border-radius: 8px;
+}

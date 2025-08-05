@@ -1,10 +1,10 @@
 
-
+import Button from 'react-bootstrap/Button';
 
 const ButtonTask = ({ setShowModal }) => {
     return(
         <>
-            <button onClick={()=> setShowModal(true)}>+ Nueva tarea</button>
+            <Button variant="dark" type="button" onClick={()=> setShowModal(true)} >+ Nueva Tarea</Button>
         </>
     )
 }
