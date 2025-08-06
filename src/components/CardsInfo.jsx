@@ -1,17 +1,20 @@
+import { useState } from 'react';
 import '../styles/CardsInfo.css'
 import CheckTask from './CheckTask';
 
 
 const CardsInfo = (props) => {
+    const [isChecked, setIsChecked] = useState(false)
+
     return (
         <>
             <div className="container-cards">
                 <div className='check'>
-                    <CheckTask />
+                    <CheckTask isChecked={isChecked} setIsChecked={setIsChecked}/>
                 </div>
                 <div className='info-cards'>
                     <div>
-                        <h3>{props.titulo}</h3>
+                        <h3 className={isChecked ? "tachado" : ""}>{props.titulo}</h3>
                     </div>
                     <div>
                         <p>{props.description}</p>

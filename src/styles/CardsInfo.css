@@ -54,3 +54,8 @@
 .info-cards{
   width: 100%;
 }
+
+.tachado{
+  text-decoration: line-through;
+  color: rgb(157, 157, 157);
+}
