@@ -5,7 +5,7 @@ const Title = ()=>{
         <>
           <div className='title-container'>
             <h1 className="title">Gestor de Tareas</h1>
-            <p className='parrafo-title'>Organiza y gestiona tus tareas de manera</p>
+            <p className='parrafo-title'>Organiza y gestiona tus tareas de manera eficiente</p>
           </div>
           
         </>

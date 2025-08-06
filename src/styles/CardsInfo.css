@@ -1,4 +1,5 @@
 .container-cards {
+  display: flex;
   margin-top: 20px;
   background-color: white;
   box-shadow: 2px 4px 15px grey;
@@ -44,4 +45,12 @@
   width: 150px;
   border-radius: 10px;
   text-align: center;
+}
+
+.check{
+  margin-right: 20px;
+}
+
+.info-cards{
+  width: 100%;
 }
