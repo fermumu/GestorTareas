@@ -6,22 +6,22 @@ const ContainerCards = () => {
             <CardsGestor 
                 title='total'
                 task='4'
-                icon='../src/assets/react.svg'
+                icon='../src/assets/total.gif'
             />
             <CardsGestor 
                 title='Completadas'
                 task='4'
-                icon='../src/assets/react.svg'
+                icon='../src/assets/completadas.gif'
             />
             <CardsGestor 
                 title='En progreso'
                 task='4'
-                icon='../src/assets/react.svg'
+                icon='../src/assets/progreso.gif'
             />
             <CardsGestor 
                 title='Pendientes'
                 task='4'
-                icon='../src/assets/react.svg'
+                icon='../src/assets/pendiente.gif'
             />
         </>
     )
