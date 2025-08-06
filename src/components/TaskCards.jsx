@@ -23,6 +23,8 @@ const TaskCards = ({ updateTasks }) => {
                         titulo={datos.titulo}
                         description={datos.description}
                         fechaLimite={datos.fechaLimite}
+                        prioridad={datos.prioridad}
+                        categoria={datos.categoria}
                     />
                 )
             )}

@@ -70,9 +70,9 @@ const ModalTask = ({ showModal, setShowModal, setUpdateTasks }) => {
                                 <Form.Label>Prioridad</Form.Label>
                                 <Form.Select value={prioridad} onChange={e => setPrioridad(e.target.value)}>
                                     <option value="">Seleccionar</option>
-                                    <option value="alta">Alta</option>
-                                    <option value="media">Media</option>
-                                    <option value="baja">baja</option>
+                                    <option value="Alta">Alta</option>
+                                    <option value="Media">Media</option>
+                                    <option value="Baja">Baja</option>
                                 </Form.Select>
 
                             </Form.Group>
