@@ -18,7 +18,7 @@ function App() {
       <div className="body-container">
         <Title/>
         <div className="gestor-container">
-          <ContainerCards />
+          <ContainerCards updateTasks = {updateTasks}/>
         </div>
         <TaskSearch setShowModal = {setShowModal}/>
         <ModalTask showModal = {showModal} setShowModal = {setShowModal} setUpdateTasks = {setUpdateTasks}/>

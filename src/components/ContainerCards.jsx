@@ -1,24 +1,36 @@
+import { useState,useEffect } from "react";
 import CardsGestor from "../components/CardsGestor"
+import { getTask } from "../services/localStorageService";
 
-const ContainerCards = () => {
-    return(
+const ContainerCards = ({ updateTasks }) => {
+
+    const [countTask, setCountTask] = useState(0);
+
+
+    useEffect(() => {
+        const tarea = getTask();
+        setCountTask(tarea.length)
+    }, [updateTasks])
+
+
+    return (
         <>
-            <CardsGestor 
+            <CardsGestor
                 title='total'
-                task='4'
+                task={countTask}
                 icon='../src/assets/total.gif'
             />
-            <CardsGestor 
+            <CardsGestor
                 title='Completadas'
                 task='4'
                 icon='../src/assets/completadas.gif'
             />
-            <CardsGestor 
+            <CardsGestor
                 title='En progreso'
                 task='4'
                 icon='../src/assets/progreso.gif'
             />
-            <CardsGestor 
+            <CardsGestor
                 title='Pendientes'
                 task='4'
                 icon='../src/assets/pendiente.gif'

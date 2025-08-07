@@ -10,6 +10,8 @@ const TaskCards = ({ updateTasks }) => {
 
     useEffect(() => {
         const tarea = getTask();
+        console.log(tarea.length);
+        
         console.log("Tarea cargada:", tarea);
         setData(tarea)
     }, [updateTasks])
