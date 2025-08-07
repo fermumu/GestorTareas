@@ -5,11 +5,20 @@ import { getTask } from "../services/localStorageService";
 const ContainerCards = ({ updateTasks }) => {
 
     const [countTask, setCountTask] = useState(0);
+    const [countCompletedTasks, setCountCompletedTasks] = useState(0);
+    const [countMissingTask, setCountMissingTask] = useState(0);
 
 
     useEffect(() => {
         const tarea = getTask();
-        setCountTask(tarea.length)
+        setCountTask(tarea.length);
+
+        const taskCompleted = tarea.filter(t => t.isCompleted === true).length;
+        setCountCompletedTasks(taskCompleted);
+
+        const taskMissing = tarea.filter(t => t.isCompleted === false).length;
+        setCountMissingTask(taskMissing);
+
     }, [updateTasks])
 
 
@@ -22,7 +31,7 @@ const ContainerCards = ({ updateTasks }) => {
             />
             <CardsGestor
                 title='Completadas'
-                task='4'
+                task={countCompletedTasks}
                 icon='../src/assets/completadas.gif'
             />
             <CardsGestor
@@ -32,7 +41,7 @@ const ContainerCards = ({ updateTasks }) => {
             />
             <CardsGestor
                 title='Pendientes'
-                task='4'
+                task={countMissingTask}
                 icon='../src/assets/pendiente.gif'
             />
         </>

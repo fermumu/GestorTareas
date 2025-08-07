@@ -8,6 +8,8 @@ const TaskCards = ({ updateTasks }) => {
 
     const [data, setData] = useState([])
 
+    
+
     useEffect(() => {
         const tarea = getTask();
         console.log(tarea.length);
@@ -27,6 +29,9 @@ const TaskCards = ({ updateTasks }) => {
                         fechaLimite={datos.fechaLimite}
                         prioridad={datos.prioridad}
                         categoria={datos.categoria}
+                        id={datos.id}
+                        isCompleted={datos.isCompleted}
+                        updateTasks={updateTasks}
                     />
                 )
             )}

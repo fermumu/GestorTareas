@@ -11,6 +11,7 @@ export function useTaskForm(setShowModal) {
     const [categoria, setCategoria] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [modalClose, setModalClose] = useState(false);
+    const [isCompleted, setIsCompleted] = useState(false)
     
 
     const handleCreateTask = () => {
@@ -25,7 +26,7 @@ export function useTaskForm(setShowModal) {
 
         if (isValid) {
 
-            saveTask(infoTitle, infoDescription, prioridad, fechaLimite, categoria);
+            saveTask(infoTitle, infoDescription, prioridad, fechaLimite, categoria, isCompleted);
             
             setModalClose(true);
             setTimeout(() => {

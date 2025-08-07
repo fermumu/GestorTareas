@@ -4,13 +4,21 @@ import CheckTask from './CheckTask';
 
 
 const CardsInfo = (props) => {
-    const [isChecked, setIsChecked] = useState(false)
+    const [isChecked, setIsChecked] = useState(props.isCompleted);
+
+    
 
     return (
         <>
             <div className="container-cards">
                 <div className='check'>
-                    <CheckTask isChecked={isChecked} setIsChecked={setIsChecked}/>
+                    <CheckTask 
+                        isChecked={isChecked} 
+                        setIsChecked={setIsChecked} 
+                        titulo={props.titulo} 
+                        isCompleted={props.isCompleted}
+                        updateTasks={props.updateTasks}
+                    />
                 </div>
                 <div className='info-cards'>
                     <div>
