@@ -17,7 +17,7 @@ const CardsInfo = (props) => {
                         setIsChecked={setIsChecked} 
                         titulo={props.titulo} 
                         isCompleted={props.isCompleted}
-                        updateTasks={props.updateTasks}
+                        setUpdateTasks={props.setUpdateTasks}
                     />
                 </div>
                 <div className='info-cards'>

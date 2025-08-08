@@ -22,7 +22,7 @@ function App() {
         </div>
         <TaskSearch setShowModal = {setShowModal}/>
         <ModalTask showModal = {showModal} setShowModal = {setShowModal} setUpdateTasks = {setUpdateTasks}/>
-        <TaskCards updateTasks = {updateTasks}/>
+        <TaskCards updateTasks = {updateTasks} setUpdateTasks={setUpdateTasks}/>
       </div>
       
     </>

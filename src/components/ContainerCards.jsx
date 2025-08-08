@@ -13,11 +13,9 @@ const ContainerCards = ({ updateTasks }) => {
         const tarea = getTask();
         setCountTask(tarea.length);
 
-        const taskCompleted = tarea.filter(t => t.isCompleted === true).length;
-        setCountCompletedTasks(taskCompleted);
+        setCountCompletedTasks(tarea.filter(t => t.isCompleted === true).length);
 
-        const taskMissing = tarea.filter(t => t.isCompleted === false).length;
-        setCountMissingTask(taskMissing);
+        setCountMissingTask(tarea.filter(t => t.isCompleted === false).length);
 
     }, [updateTasks])
 

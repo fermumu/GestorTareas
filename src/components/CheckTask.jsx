@@ -1,8 +1,8 @@
 import "../styles/CheckTask.css"
-import { getTask, overwriteTasks, saveTask } from "../services/localStorageService"
+import { getTask, overwriteTasks } from "../services/localStorageService"
 
 
-const CheckTask = ({ isChecked, setIsChecked,titulo, isCompleted, updateTasks }) => {
+const CheckTask = ({ isChecked, setIsChecked,titulo, isCompleted, setUpdateTasks }) => {
     
     const handleCheck = ()=>{
         setIsChecked( !isChecked )
@@ -18,7 +18,7 @@ const CheckTask = ({ isChecked, setIsChecked,titulo, isCompleted, updateTasks })
 
         overwriteTasks(tareasActualizadas)
 
-        updateTasks();
+        setUpdateTasks(prev => prev + 1);
     }
     return(
         <>

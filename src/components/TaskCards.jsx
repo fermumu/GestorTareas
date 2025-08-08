@@ -3,7 +3,7 @@ import { getTask } from "../services/localStorageService";
 import CardsInfo from "./CardsInfo";
 
 
-const TaskCards = ({ updateTasks }) => {
+const TaskCards = ({ updateTasks,setUpdateTasks }) => {
 
 
     const [data, setData] = useState([])
@@ -32,6 +32,7 @@ const TaskCards = ({ updateTasks }) => {
                         id={datos.id}
                         isCompleted={datos.isCompleted}
                         updateTasks={updateTasks}
+                        setUpdateTasks={setUpdateTasks}
                     />
                 )
             )}
