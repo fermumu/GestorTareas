@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styles/CardsInfo.css'
 import CheckTask from './CheckTask';
+import EditButton from './EditButton';
 
 
 const CardsInfo = (props) => {
@@ -38,7 +39,9 @@ const CardsInfo = (props) => {
 
                     </div>
                 </div>
-
+                <div>
+                    <EditButton/>
+                </div>
 
             </div>
         </>
