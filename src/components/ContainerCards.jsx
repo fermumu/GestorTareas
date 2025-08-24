@@ -8,7 +8,7 @@ const ContainerCards = ({ updateTasks }) => {
     const [countCompletedTasks, setCountCompletedTasks] = useState(0);
     const [countMissingTask, setCountMissingTask] = useState(0);
 
-
+    //seteamos la variable que contiene el estado enviado de cada tarea
     useEffect(() => {
         const tarea = getTask();
         setCountTask(tarea.length);
