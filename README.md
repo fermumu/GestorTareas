@@ -31,9 +31,26 @@ Aplicación para gestionar tareas con filtros y búsqueda, desarrollada en **Rea
 Clona el repositorio e instala dependencias:
 
 ```bash
-git clone https://github.com/tu-usuario/task-manager.git
-cd task-manager
+git clone https://github.com/fermumu/GestorTareas.git
+cd GestorTareas
 npm install
 
+```
 
---- 
+## 4. Uso
+
+
+- Ingresa una nueva tarea desde el botón Agregar tarea.
+
+- Usa la barra de búsqueda para encontrar tareas rápidamente.
+
+- Selecciona en el filtro:
+
+- Pendientes: tareas que aún no han comenzado.
+
+- En progreso: tareas en ejecución.
+
+- Completadas: tareas finalizadas.
+
+- Las tareas se almacenan en LocalStorage, por lo que no se pierden al recargar.
+
