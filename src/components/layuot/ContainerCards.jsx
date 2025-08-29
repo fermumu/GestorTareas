@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
-import CardsGestor from "../components/CardsGestor"
-import { getTask } from "../services/localStorageService";
+import CardsGestor from "../common/CardsGestor"
+import { getTask } from "../../services/localStorageService";
 
 const ContainerCards = ({ updateTasks }) => {
 

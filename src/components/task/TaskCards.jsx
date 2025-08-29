@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getTask } from "../services/localStorageService";
+import { getTask } from "../../services/localStorageService";
 import CardsInfo from "./CardsInfo";
 
 

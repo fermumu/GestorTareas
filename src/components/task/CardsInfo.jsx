@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../styles/CardsInfo.css'
+import '../../styles/CardsInfo.css'
 import CheckTask from './CheckTask';
 import EditButton from './EditButton';
 

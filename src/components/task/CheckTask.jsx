@@ -1,5 +1,5 @@
-import "../styles/CheckTask.css"
-import { getTask, overwriteTasks } from "../services/localStorageService"
+import "../../styles/CheckTask.css"
+import { getTask, overwriteTasks } from "../../services/localStorageService"
 
 
 const CheckTask = ({ isChecked, setIsChecked,titulo, isCompleted, setUpdateTasks }) => {

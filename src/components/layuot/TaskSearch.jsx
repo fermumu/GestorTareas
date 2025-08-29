@@ -3,8 +3,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ButtonTask from './ButtonTask';
-import FilterTask from './FilterTask';
+import ButtonTask from '../common/ButtonTask';
+import FilterTask from '../task/FilterTask';
 
 function TaskSearch({ setShowModal }) {
     return (

@@ -1,10 +1,10 @@
 import { useState } from "react"
-import ContainerCards from "./components/ContainerCards"
-import Title from "./components/Title"
+import ContainerCards from "./components/layuot/ContainerCards"
+import Title from "./components/layuot/Title"
 import './styles/App.css'
-import ModalTask from "./components/ModalTask"
-import TaskCards from "./components/TaskCards"
-import TaskSearch from "./components/TaskSearch"
+import ModalTask from "./components/modals/ModalTask"
+import TaskCards from "./components/task/TaskCards"
+import TaskSearch from "./components/layuot/TaskSearch"
 
 
 function App() {

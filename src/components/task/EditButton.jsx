@@ -1,4 +1,4 @@
-import "../styles/EditButton.css"
+import "../../styles/EditButton.css"
 
 
 const EditButton = () => {

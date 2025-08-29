@@ -1,4 +1,4 @@
-import '../styles/CardGestor.css'
+import '../../styles/CardGestor.css'
 
 
 const CardsGestor = ({ title, icon, task})=>{
