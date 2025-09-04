@@ -33,11 +33,6 @@ const ContainerCards = ({ updateTasks }) => {
                 icon='../src/assets/completadas.gif'
             />
             <CardsGestor
-                title='En progreso'
-                task='4'
-                icon='../src/assets/progreso.gif'
-            />
-            <CardsGestor
                 title='Pendientes'
                 task={countMissingTask}
                 icon='../src/assets/pendiente.gif'

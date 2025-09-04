@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ButtonTask from '../common/ButtonTask';
 import FilterTask from '../task/FilterTask';
-import { FaSearch } from "react-icons/fa";
 
 function TaskSearch({ setShowModal }) {
     return (
@@ -19,7 +18,7 @@ function TaskSearch({ setShowModal }) {
                             className=" mr-sm-2"
                             style={{ width: "600px" }}
                         />
-                        <FaSearch style={{ marginLeft: "-30px", cursor: "pointer" }} />
+                        
                     </Col>
                     <Col xs="auto">
                         <FilterTask/>
