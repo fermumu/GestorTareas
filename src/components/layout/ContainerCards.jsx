@@ -25,17 +25,17 @@ const ContainerCards = ({ updateTasks }) => {
             <CardsGestor
                 title='total'
                 task={countTask}
-                icon='../../public/assets/total.gif'
+                icon='/assets/total.gif'
             />
             <CardsGestor
                 title='Completadas'
                 task={countCompletedTasks}
-                icon='../../public/assets/completadas.gif'
+                icon='/assets/completadas.gif'
             />
             <CardsGestor
                 title='Pendientes'
                 task={countMissingTask}
-                icon='../../public/assets/pendiente.gif'
+                icon='/assets/pendiente.gif'
             />
         </>
     )
