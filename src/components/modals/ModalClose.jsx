@@ -1,5 +1,5 @@
 import { Modal, Button } from 'react-bootstrap';
-import '../../styles/ModalClose.css';
+import '../../styles/Modalclose.css';
 
 const ModalClose = ({ show, handleClose }) => {
     return (
